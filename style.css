@@ -1,0 +1,1063 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-size: 67.5%;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+/* Navbar */
+.navbar{
+    position: fixed;
+    margin-left: 90%;
+    z-index: 100;
+    margin-top: 3%;
+}
+.navbar-icon{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(177, 106, 0);
+    opacity: .5;
+    border-radius: 10px 10px 0 0 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.navbar .navbar-line:nth-child(1){
+    width: 60%;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 8px;
+    height: 3px;
+    border-radius: 2px;
+    transition: all 1s;
+}
+.navbar .navbar-line:nth-child(2){
+    width: 70%;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 4px;
+    height: 3px;
+    border-radius: 2px;
+}
+.navbar .navbar-line:nth-child(3){
+    width: 80%;
+    background-color: rgb(0, 0, 0);
+    margin-top: 4px;
+    height: 3px;
+    border-radius: 2px;
+    transition: all 1s;
+}
+.navbar-icon:hover{
+    opacity: 1;
+}
+.navbar-infor{
+    position: fixed;
+    width: 0%;
+    height: 100vh;
+    display: flex;
+    background-color: #eee;
+    margin-left: 20%;
+    opacity: 0;
+    transition: width 1s;
+    z-index: 20;
+}
+.navbar-infor-opacity{
+    opacity: 1;
+    width: 80%;
+    transition: width 1s;
+}
+.navbar-infor ul{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.navbar-infor ul li{
+    width: 100%;
+    height: 20%;
+    padding-top: 5%;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.navbar-infor li:nth-child(even):hover{
+    background-color: rgb(177, 106, 0);
+    opacity: 1;
+}
+.navbar-infor li:nth-child(odd):hover{
+    background-color: rgb(119, 113, 105);
+    opacity: 1;
+}
+.navbar-infor ul li a{
+    color: #fff;
+}
+.navbar-infor li:nth-child(even){
+    background-color: rgb(177, 106, 0);
+    opacity: .7;
+}
+.navbar-infor li:nth-child(odd){
+    background-color: rgb(119, 113, 105);
+    opacity: .7;
+}
+
+/* Header */
+.home{
+    background-image: url('img/car-2158284_1280.png');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.home ul{
+    position: absolute;
+    display: flex;
+    top: 7%;
+    right: 13%;
+}
+.home li{
+    margin: 0px 15px;
+}
+.home li a{
+    font-size: 1.1rem;
+    color: #fff;
+}
+.home li a:hover{
+    color: rgb(177, 106, 0);
+    box-shadow: 2px 3px 4px rgb(177, 106, 0);
+}
+.home ul li:hover{
+    transform: rotate(10deg);
+}
+.home .brend {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 70px;
+    height: 70px;
+    animation: animate_brend 10s forwards linear infinite;
+}
+.home .brend img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.home .infor{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.home .infor h1{
+    font-size: 4.2rem;
+    color: #eee;
+    font-weight: 400;
+    animation: animate_h1 10s forwards infinite linear;
+    box-shadow: 10px 10px 40px rgb(0, 0, 0);
+}
+@keyframes animate_brend{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes animate_h1{
+    0%,100%{
+        color: #eee;
+    }
+    50%{
+        color: rgb(177, 106, 0);;
+    }
+}
+/* Vehicles */
+#vehicles{
+    height: 110vh;
+    background-color: #eee;
+    margin: 40px auto;
+}
+.vehicles .main-header{
+    font-size: 4rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 20px 0;
+    color: rgb(119, 113, 105);
+    margin-bottom: 50px;
+}
+.vehicles .main-header span{
+    color: rgb(177, 106, 0);
+}
+.cards_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+.cards1, .cards2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    margin: 0px auto;
+    height: 100%;
+}
+.cards1 .each-cards,.cards2 .each-cards{
+    width: 300px;
+    height: 500px;
+    background-color: rgb(119, 113, 105);
+    position: absolute;
+    margin-top: -10%;
+    z-index: 1;
+    cursor: pointer;
+}
+.cards1 .second,.cards2 .second{
+    transform: rotate(20deg);
+    transition: transform .5s;
+}
+.cards1 .second-rotate,.cards2 .second-rotate{
+    transform: rotate(0deg);
+    z-index: 2;
+    transition: transform .5s;
+}
+.cards1 .main,.cards2 .main{
+    transform: rotate(-20deg);
+    transition: transform .5s;
+}
+.cards1 .main-rotate,.cards2 .main-rotate{
+    transform: rotate(0deg);
+    z-index: 2;
+    transition: transform .5s;
+}
+.cards1 .last,.cards2 .last{
+    transform: rotate(0deg);
+    transition: transform .5s;
+}
+.cards_list .cards1 .last-rotate-main,.cards_list  .cards2 .last-rotate-main{
+    transform: rotate(-20deg);
+    transition: transform .5s;
+}
+.cards_list .cards1 .last-rotate-second,.cards_list  .cards2 .last-rotate-second{
+    transform: rotate(20deg);
+    transition: transform .5s;
+}
+.each-cards{
+    background-image: linear-gradient(rgb(145, 106, 47), rgb(92, 89, 80));
+    border-radius: 10px;
+    border: 2px solid rgb(177, 106, 0);
+}
+.each-cards .car-image {
+    width: 100%;
+    height: 50%;
+}
+.each-cards .car-image img{
+    width: 100%;
+    height: 100%;
+}
+.each-cards .name-card{
+    font-size: 1.4rem;
+    font-weight: 100;
+    letter-spacing: .2rem;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(177, 106, 0) 3px 3px 3px;
+}
+.each-cards .inform{
+    width: 100%;
+    letter-spacing: .3rem;
+    font-size: 1.1rem;
+    font-weight: 200;
+    margin-top: 10%;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(119, 113, 105);
+}
+.each-cards .moreInform button{
+    width: 100px;
+    height: 30px;
+    margin: 0px auto;
+    font-size: 1.1rem;
+    font-weight: 200;
+    margin-top: 5%;
+    background-image: linear-gradient(to right, rgb(187, 179, 179), rgb(88, 80, 80));
+    box-shadow: 2px 2px 2px rgb(119, 113, 105);
+    cursor: pointer;
+}
+.each-cards .moreInform button:hover{
+    box-shadow: none;
+}
+/* Advetise */
+.advetise{
+    width: 100%;
+    height: 20vh;
+    background-image: linear-gradient(rgb(150, 127, 123),rgb(202, 64, 64));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.advetise h1{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: .2rem;
+}
+.advetise h3{
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+}
+.advetise button{
+    width: 100px;
+    height: 30px;
+    font-size: 1.1rem;
+    font-weight: 200;
+    background-image: linear-gradient(to right, rgb(187, 179, 179), rgb(88, 80, 80));
+    box-shadow: 2px 2px 2px rgb(119, 113, 105);
+    cursor: pointer;
+    margin-left: 20px;
+}
+.advetise .icons img{
+    margin: 0px 5px;
+    margin-left: 20px;
+    filter: grayscale(1);
+    cursor: pointer;
+    transition: all .4s;
+}
+.advetise .icons img:hover{
+    filter: grayscale(0);
+    transition: all .4s;
+}
+/* Design */
+.design{
+    height: 130vh;
+}
+.design .main-header{
+    margin: 50px auto;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgb(92, 89, 80);
+}
+.design .main-header span{
+    color: rgb(177, 106, 0);
+}
+.design .cards_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 50px;
+    perspective: 600px;
+    transform-style: preserve-3d;
+}
+.design .card{
+    width: 40%;
+    height: 300px;
+    margin: 0 auto;
+    transform: rotateX(30deg);
+    box-shadow: 3px 3px 3px rgb(88, 80, 80);
+    cursor: pointer;
+    transition: all .7s;
+}
+.design .card:hover{
+    animation: animation_design_card 1s forwards linear
+}
+@keyframes animation_design_card{
+    0%{
+        transform: rotateX(30deg) scale(1) rotateY(0deg);
+    }
+    50%{
+        transform: rotateX(15deg) scale(1.1) rotateY(180deg);
+    }
+    100%{
+        transform: rotateX(0deg) scale(1.2) rotateY(360deg);
+    }
+}
+
+.design .first .card:nth-child(1){
+    background-image: url('img/pexels-alex-amorales-909907.jpg');
+    background-position: center bottom;
+    background-size: cover;
+}
+.design .first .card:nth-child(2){
+    background-image: url('img/pexels-jae-park-4141962.jpg');
+    background-position: center bottom;
+    background-size: cover;
+}
+.design .second .card:nth-child(1){
+    background-image: url('img/pexels-mike-241316.jpg');
+    background-position: center bottom;
+    background-size: cover;
+}
+.design .second .card:nth-child(2){
+    background-image: url('img/pexels-sourav-mishra-2827754.jpg');
+    background-position: center bottom;
+    background-size: cover;
+}
+.design .card h1{
+    box-shadow: 13px 13px 13px transparent;
+    border: 1px solid transparent;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    animation: animate_design_h1 infinite 10s forwards linear;
+    text-align: left;
+}
+@keyframes animate_design_h1{
+    0%,100%{
+        color: #fff;
+    }
+    20%{
+        color:rgb(177, 106, 0)
+    }
+    20%{
+        color:rgb(0, 12, 177)
+    }
+    20%{
+        color:rgb(24, 194, 224)
+    }
+    20%{
+        color:rgb(126, 25, 25)
+    }
+}
+.design p{
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+    font-weight: bold;
+    color: #fff;
+    animation: animate_design_h1 infinite 10s 3s forwards linear;   
+    text-align: left;
+}
+/* History */
+.history{
+    border-top: 1px solid rgb(145, 106, 47);
+    border-bottom: 1px solid rgb(145, 106, 47);
+    display: block;
+    height: 100vh;
+}
+
+.history .main-header{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgb(92, 89, 80);
+}
+.history .main-header span{
+    color: rgb(177, 106, 0);
+}
+
+.history .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.history .card{
+    width: 100%;
+    height: 45%;
+    margin: 20px auto;
+    display: flex;
+    background-color: rgb(92, 89, 80);
+}
+.history .main-section{
+    width: 40%;
+    height: 100%;
+    border-radius: 0px 50% 50% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.history .main-section h1{
+    width: 100%;
+    height: 20%;
+}
+.history .main-section img{
+    width: 100%;
+    height: 80%;
+}
+.card:nth-child(1) .main-section{
+    background-image: url('img/pexels-sourav-mishra-1231643.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.card:nth-child(2) .main-section{
+    background-image: url('img/pexels-pixabay-164634.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.history .main-section h1{
+    font-size: 2rem;
+    font-weight: 400;
+    background-color: transparent;
+    box-shadow: 3px 4px 3px rgb(92, 89, 80);
+    color: rgb(179, 156, 27);
+    margin-top: 50%;
+    margin-left: -5%;
+}
+.history .info-section{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.history .info-section h1{
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: rgb(177, 106, 0);
+    margin: 20px 0 40px 0;
+}
+.history .info-section p{
+    font-weight: 300;
+    letter-spacing: .2rem;
+    color: #fff;
+    line-height: 30px;
+}
+/* Types */
+.types{
+    margin-top: 90px;
+    background-color: #eee;
+}
+.types .main-header{
+    margin: 50px auto;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgb(92, 89, 80);
+}
+.types .main-header span{
+    color: rgb(177, 106, 0);
+}
+.types .cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    margin: 0px auto;
+}
+.types .card{
+    width: 100%;
+    margin: 0px auto;
+    height: 40vh;
+    margin-bottom: 30px;
+    background-color: rgb(177, 106, 0);
+    display: flex;
+}
+.types .inform{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.types .pictures{
+    width: 60%;
+    height: 100%;
+}
+.types .inform h1{
+    font-size: 2rem;
+    font-weight: 200;
+    color: #fff;
+}
+.types .inform p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    line-height: 15px;
+    margin-top: 10px;
+    color: rgb(88, 80, 80);
+}
+.types .pictures {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.types .pictures div{
+    width: 50px;
+    height: 80%;
+    background-color: rgb(187, 179, 179);
+    margin:0px 10px;
+    transform: rotate(20deg);
+}
+.types .card:nth-child(1) .pic1{
+    background-image: url('img/pexels-pixabay-358070.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -20px;
+}
+.types .card:nth-child(1)  .pic2{
+    background-image: url('img/pexels-pixabay-358070.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -70px;
+}
+.types .card:nth-child(1) .pic3{
+    background-image: url('img/pexels-pixabay-358070.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -110px;
+}
+.types .card:nth-child(1) .pic4{
+    background-image: url('img/pexels-pixabay-358070.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -150px;
+}
+.types .card:nth-child(1) .pic5{
+    background-image: url('img/pexels-pixabay-358070.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -190px;
+}
+.types .card:nth-child(1) .pic6{
+    background-image: url('img/pexels-pixabay-358070.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -230px;
+}
+.types .card:nth-child(2) .pic1{
+    background-image: url('img/pexels-maria-geller-2127039.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -20px;
+}
+.types .card:nth-child(2)  .pic2{
+    background-image: url('img/pexels-maria-geller-2127039.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -70px;
+}
+.types .card:nth-child(2) .pic3{
+    background-image: url('img/pexels-maria-geller-2127039.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -110px;
+}
+.types .card:nth-child(2) .pic4{
+    background-image: url('img/pexels-maria-geller-2127039.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -150px;
+}
+.types .card:nth-child(2) .pic5{
+    background-image: url('img/pexels-maria-geller-2127039.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -190px;
+}
+.types .card:nth-child(2) .pic6{
+    background-image: url('img/pexels-maria-geller-2127039.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -230px;
+}
+h6{
+    margin-top: 1000px;
+}
+/* About */
+.about{
+    background-color: #eee;
+}
+.about .main-header{
+    margin: 50px auto;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgb(92, 89, 80);
+}
+.about .main-header span{
+    color: rgb(177, 106, 0);
+}
+.about .card{
+    width: 80%;
+    height: 50vh;
+    background-color: #eee;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.about .card h1{
+    font-size: 1.5rem;
+    color: rgb(177, 106, 0);
+    font-weight: 300;
+}
+.about .card h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(88, 82, 82);
+}
+.about a{
+    font-size: 1.5rem;
+    color: rgb(177, 106, 0);
+}
+.about .icons{
+    margin-top: 30px;
+}
+.about .icons img{
+    margin: 0px 20px;
+    filter: grayscale(1);
+    cursor: pointer;
+    transition: all .3s;
+}
+.about .icons img:hover{
+    filter: grayscale(0);
+    transition: all .3s;
+}
+/* footer */
+.footer{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(88, 82, 82);
+    margin-top: 20px;
+}
+.footer h1{
+    font-size: 1.3rem;
+    letter-spacing: .3rem;
+    color: rgb(177, 106, 0);
+    margin: 20px auto;
+    text-align: center;
+    padding-top:20px;
+}
+.footer div{
+    width: 80%;
+    height: 2px;
+    background-color: rgb(179, 156, 27);
+    margin: 0px auto;
+}
+.footer h3{
+    text-align: center;
+    color: rgb(177, 106, 0);
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    margin-bottom: 5px;
+}
+@media screen and (max-width:1200px){
+    .types .pictures div {
+        width: 40px;
+        height: 70%;
+    }
+}
+
+
+
+@media screen and (max-width: 1064px){
+    .navbar .navbar-icon{
+        width: 35px;
+        height: 35px;
+    }
+    .home .brend{
+        width: 60px;
+        height: 60px;
+    }
+    .home .infor h1{
+       font-size: 3.5rem;
+    }
+    .main-header {
+        font-size: 2.5rem;
+    }
+    .cards1 .each-cards, .cards2 .each-cards {
+        width: 250px;
+        height: 400px;
+    }
+    .name-card h1{
+        font-size: 1.5rem;
+    }
+    .vehicles button{
+        width: 100px;
+        height: 40px;
+    } 
+    .design .card {
+        width: 30%;
+        height: 250px;
+    }
+    .types .card h1{
+        font-size: 1.2rem;
+    }
+    .types .card p{
+        font-size: 1.1rem;
+    }
+    .types .pictures div {
+        width: 40px;
+        height: 70%;
+    }
+    .footer h1{
+        font-size: 1.2rem;
+    }
+    .footer h3{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:1000px){
+    .home ul {
+        position: absolute;
+        display: flex;
+        top: 7%;
+        right: 13%;
+        width: 70%;
+    }
+    .types .pictures div {
+        width: 35px;
+        height: 65%;
+    }
+}
+@media screen and (max-width:900px){
+    .home li a {
+        font-size: 1rem;
+    }
+    .home .infor h1 {
+        font-size: 3rem;
+    }
+    .main-header{
+        font-size: 1.7rem;
+    }
+    .cards1 .each-cards, .cards2 .each-cards {
+        width: 220px;
+        height: 350px;
+    }
+    .vehicles .each-cards h1, .vehicles .each-cards h3{
+        font-size: 1rem;
+    }
+    .pic6{
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:800px){
+    .home .infor h1 {
+        font-size: 2.5rem;
+    }
+    .home li a {
+        font-size: .9rem;
+        color: #fff;
+    }
+    .vehicles .main-header, .design .main-header, .history .main-header, .types .main-header{
+        font-size: 2.5rem;
+    }
+    #vehicles{
+        height: 165vh;
+    }
+    .vehicles .cards_list{
+        display: flex;
+        flex-direction: column;
+        display: block;
+        height: 70vh;
+        margin: auto 0px;
+    }
+    .history .info-section p {
+        font-weight: 300;
+        letter-spacing: .05rem;
+        color: #fff;
+        line-height: 30px;
+    }
+    .types .inform p {
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: .05rem;
+        margin-top: 10px;
+        color: rgb(88, 80, 80);
+    }
+    .about h1, .about h2{
+        font-size: 1.5rem;
+    }
+    
+}
+@media screen and (max-width:700px){
+    .home li a {
+        font-size: .7rem;
+        color: #fff;
+    }
+    .home .infor h1 {
+        font-size: 2rem;
+    }
+    .first{
+        display: flex;
+        flex-direction: column;
+    }
+    .second{
+        display: flex;
+        flex-direction: column;
+    }
+    .design .card {
+        width: 60%;
+        height: 200px;
+        display: block;
+    }
+    .first h1, .first p{
+        font-size: 1.1rem;
+    }
+    .second h1, .second p{
+        font-size: 1.1rem;
+    }
+    #design .first .card {
+        background-position: center center;
+    }
+    #design .second .card {
+        background-position: center center;
+    }
+    .types .inform p{
+        font-size: .7rem;
+    }
+}
+@media screen and (max-width:600px){
+    .home .brend {
+        opacity: 0;;
+    }
+    .home li {
+        margin: 3px;
+    }
+    .vehicles .cards1{
+        display: block;
+        margin: 20px auto;
+        width: 50%;
+        height: 100%;
+    }
+    .vehicles .main-header{
+        margin-bottom: 20%;
+    }
+    .vehicles .cards1 .each-cards{
+        width: 35%;
+        height: 50%;
+    }
+    .vehicles .cards2 .each-cards{
+        width: 35%;
+        height: 50%;
+    }
+    .vehicles .each-cards h1,
+    .vehicles .each-cards h3{
+        font-size: .7rem;
+    }
+    .vehicles .each-cards .moreInform{
+        width: 60px;
+        height: 30px;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+    }
+    .history .info-section h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    .about h1, .about h2, .about a{
+        font-size: 1.4rem;
+    }
+    .about .icons img{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 500px){
+    .types .inform p {
+        font-size: .5rem;
+        font-weight: 500;
+    }
+    .about h1, .about h2, .about a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 400px){
+    .home li a{
+        opacity: 0;
+    }
+    .home .brend {
+        opacity: 1;
+    }
+    .vehicles .cards1 .each-cards{
+        width: 30%;
+        height: 46%;
+    }
+    .vehicles .cards2 .each-cards{
+        width: 30%;
+        height: 46%;
+    }
+    .vehicles .each-cards .moreInform{
+        opacity: 0;
+    }
+    .advetise .icons img {
+        width: 35px;
+        height: 35px;
+    }
+    .design{
+        height: 100%;
+    }
+    .history{
+        height: 100%;
+    }
+    .history .card {
+        height: 20%;
+    }
+    .history .main-section h1{
+        opacity: 0;
+    }
+    .types .inform p {
+        font-size: .4rem;
+        font-weight: 500;
+        letter-spacing: .1px;
+    }
+    .footer h1{
+        font-size: 1rem;
+    }
+    .footer h3{
+        font-size: .5rem;
+    }
+    .about .icons img{
+        width: 40px;
+        height: 40px;
+    }
+    #vehicles{
+        height: 120vh;
+    }
+    #vehicles .cards_list{
+        height: 45%;
+    }
+    .vehicles .cards1{
+        margin-bottom: -10%;
+    }
+    .vehicles .main-header, .design .main-header, .history .main-header, .types .main-header, .about .main-header{
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
